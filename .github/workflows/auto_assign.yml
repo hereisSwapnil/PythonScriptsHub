@@ -29,7 +29,7 @@ jobs:
               const commenter = context.payload.comment.user.login;
               const config = {
                 owner: 'Swapnil-Singh-99',
-                repo: 'GitHub-Actions-Demo',
+                repo: 'PythonScriptsHub',
                 issue_number: issueNumber,
                 assignees: [commenter]
               };
