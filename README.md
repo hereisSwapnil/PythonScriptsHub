@@ -1,4 +1,3 @@
-# <p align="center">PythonScriptsHub</p>
 
 <div align="center">
  
@@ -96,5 +95,7 @@ Feel free to reach out if you have any questions or need assistance.
   <b>If you find this project valuable or if you've learned something from it, give it a ⭐!</b>
   <br> <br>
  
-[![Built with Love]([![Screenshot-2023-08-25-at-4-27-56-PM.png](https://i.postimg.cc/Ss84TjSt/Screenshot-2023-08-25-at-4-27-56-PM.png)](https://postimg.cc/XGVtXjyw))](https://github.com/Swapnil-Singh-99/PythonScriptsHub)
+[![Built with Love](https://i.postimg.cc/664FDqW5/Screenshot-2023-08-25-at-4-27-56-PM.png)](https://github.com/Swapnil-Singh-99/PythonScriptsHub)
+
+
 </div>
