@@ -1,7 +1,7 @@
 
 <div align="center">
  
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/issues" target="_blank" title="PythonScriptsHub">![PythonScriptsHub](https://socialify.git.ci/Swapnil-Singh-99/PythonScriptsHub/image?description=1&theme=Light)</a>
+<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/issues" target="_blank" title="PythonScriptsHub">![PythonScriptsHub](https://socialify.git.ci/Swapnil-Singh-99/PythonScriptsHub/image?description=1&descriptionEditable=Diverse%20collection%20of%20Python%20Scripts&font=Jost&name=1&owner=1&pattern=Plus&theme=Auto)</a>
 
 <br>
  
@@ -20,24 +20,16 @@
 </br>
 </div>
 
-
 ## 📌 Opensource Programs
-
 
 ### This project is a part of following Open Source Programs
 
 <p align="center"><img alt="Logo" width=55% src="https://user-images.githubusercontent.com/55352601/147348331-5e8361aa-8d7c-40fb-bb2d-bec5a1f9da59.png"></p>
 
-
-
 ## 💻Table of Contents
   - **[How to Contribute?](#how-to-contribute)**
   - **[Project Admin](#project-admin)**
   - **[Our Valuable Contributors](#our-valuable-contributors)**
-
-
-
-
   
 ## How to Contribute?
 
@@ -47,39 +39,18 @@
 Your contributions are highly appreciated! Let's collaborate to make PythonScriptsHub even better.
 
 Feel free to reach out if you have any questions or need assistance.
-
-
-
-
   
-## Project Admin
+## Project Maintainers
 
-<table>
+<table align="center">
 <tr>
 <td align="center"><a href="https://github.com/Swapnil-Singh-99"><img src="https://avatars.githubusercontent.com/u/85278243?v=4" width=150px height=150px /></a></br> <h4 style="color:red;">Swapnil Singh</h4>
 <a href="https://www.linkedin.com/in/swapnilsingh99/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
-
-</tr>
-</table>
-
-
-
-
-
-## Project Mentors
-
-<table>
-<tr>
 <td align="center"><a href="https://github.com/Yashshukla11"><img src="https://avatars.githubusercontent.com/u/112846526?v=4" width=150px height=150px /></a></br> <h4 style="color:red;">Yash Shukla</h4>
 <a href="https://www.linkedin.com/in/yash-shukla-a43838266/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
-
-
-
 </tr>
 </table>
 <br>
-
-
 
 ## Our Valuable Contributors
 
@@ -96,6 +67,5 @@ Feel free to reach out if you have any questions or need assistance.
   <br> <br>
  
 [![Built with Love](https://i.postimg.cc/664FDqW5/Screenshot-2023-08-25-at-4-27-56-PM.png)](https://github.com/Swapnil-Singh-99/PythonScriptsHub)
-
 
 </div>
