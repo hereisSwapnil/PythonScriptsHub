@@ -44,9 +44,9 @@ Feel free to reach out if you have any questions or need assistance.
 
 <table align="center">
 <tr>
-<td align="center"><a href="https://github.com/Swapnil-Singh-99"><img src="https://avatars.githubusercontent.com/u/85278243?v=4" width=150px height=150px /></a></br> <h4 style="color:red;">Swapnil Singh</h4>
+<td align="center"><a href="https://github.com/Swapnil-Singh-99"><img src="https://avatars.githubusercontent.com/u/85278243?v=4" width=150px height=150px style="border-radius:50%"/></a></br> <h4 style="color:red;">Swapnil Singh</h4>
 <a href="https://www.linkedin.com/in/swapnilsingh99/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
-<td align="center"><a href="https://github.com/Yashshukla11"><img src="https://avatars.githubusercontent.com/u/112846526?v=4" width=150px height=150px /></a></br> <h4 style="color:red;">Yash Shukla</h4>
+<td align="center"><a href="https://github.com/Yashshukla11"><img src="https://avatars.githubusercontent.com/u/112846526?v=4" width=150px height=150px style="border-radius:50%" /></a></br> <h4 style="color:red;">Yash Shukla</h4>
 <a href="https://www.linkedin.com/in/yash-shukla-a43838266/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
 </tr>
 </table>
