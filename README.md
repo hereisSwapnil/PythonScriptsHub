@@ -24,7 +24,7 @@
 
 ### This project is a part of following Open Source Programs
 
-<p align="center"><img alt="Logo" width=55% src="https://user-images.githubusercontent.com/55352601/147348331-5e8361aa-8d7c-40fb-bb2d-bec5a1f9da59.png"></p>
+<p align="center"><img alt="Logo"  src="https://i.postimg.cc/8cYBbyYp/hf10-banner-1032x600.png"></p>
 
 ## 💻Table of Contents
   - **[How to Contribute?](#how-to-contribute)**
@@ -66,6 +66,5 @@ Feel free to reach out if you have any questions or need assistance.
   <b>If you find this project valuable or if you've learned something from it, give it a ⭐!</b>
   <br> <br>
  
-[![Built with Love](https://i.postimg.cc/664FDqW5/Screenshot-2023-08-25-at-4-27-56-PM.png)](https://github.com/Swapnil-Singh-99/PythonScriptsHub)
 
 </div>
