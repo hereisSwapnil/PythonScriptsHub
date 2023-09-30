@@ -17,14 +17,17 @@ jobs:
       - name: Check Author
         id: check_author
         run: echo "Author=${{ github.event.issue.user.login }}"
-
+    
       - name: Auto Comment on Issues Opened
-        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' }}
+        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' && github.actor != github.event.issue.user.login }}
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesOpened: |
             👋 @{{ author }}
+            {{steps.check_author.outputs.Author}}
+            {{github.actor}}
+            {{github.event.issue.user.login}}
 
             Thank you for raising this issue! We'll look into it ASAP.
 
@@ -40,7 +43,7 @@ jobs:
             Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Pull Request Merged
-        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' }}
+        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' && github.actor != github.event.issue.user.login }}
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -49,7 +52,7 @@ jobs:
             Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Pull Request Opened
-        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' }}
+        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' && github.actor != github.event.issue.user.login }}
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -63,7 +66,7 @@ jobs:
             Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Issues Assigned
-        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' }}
+        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' && github.actor != github.event.issue.user.login }}
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
