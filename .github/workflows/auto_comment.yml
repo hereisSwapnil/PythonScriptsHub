@@ -14,7 +14,12 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - name: Check Author
+        id: check_author
+        run: echo "Author=${{ github.event.issue.user.login }}"
+
       - name: Auto Comment on Issues Opened
+        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' }}
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -26,6 +31,7 @@ jobs:
             Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Issues Closed
+        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' }}
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,6 +40,7 @@ jobs:
             Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Pull Request Merged
+        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' }}
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -42,6 +49,7 @@ jobs:
             Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Pull Request Opened
+        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' }}
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -55,11 +63,10 @@ jobs:
             Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Issues Assigned
+        if: ${{ steps.check_author.outputs.Author != 'Swapnil-Singh-99' }}
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesAssigned: |
             Hello @{{ author }}, thank you for raising an issue. 🙌 I have assigned the issue to you. You can now start working on it. If you encounter any problems, please feel free to connect with us. 👍
             Don't forget to give a ⭐️ & Happy coding!. 😊
-
-      
