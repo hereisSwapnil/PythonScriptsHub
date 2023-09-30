@@ -36,7 +36,7 @@ jobs:
               
               const assignees = issueData.assignees.map(assignee => assignee.login);
               
-              if (!assignees.includes(commenter)) {
+              if (!assignees.length) {
                 const config = {
                   owner: 'Swapnil-Singh-99',
                   repo: 'PythonScriptsHub',
