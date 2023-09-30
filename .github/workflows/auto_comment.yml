@@ -23,7 +23,7 @@ jobs:
 
             Thank you for raising this issue! We'll look into it ASAP.
 
-            Please provide as much context as you can. 😊
+            Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Issues Closed
         uses: wow-actions/auto-comment@v1
@@ -31,6 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesClosed: |
             👋 @{{ author }} This issue is closed.
+            Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Pull Request Merged
         uses: wow-actions/auto-comment@v1
@@ -38,6 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           pullRequestMerged: |
             👋 @{{ author }} 🎉 Congrats on your merged pull request! Thanks for the valuable contribution!
+            Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Pull Request Opened
         uses: wow-actions/auto-comment@v1
@@ -50,11 +52,14 @@ jobs:
 
             Please make sure you have followed our contributing guidelines. We will review it ASAP.
 
+            Don't forget to give a ⭐️ & Happy coding!. 😊
+
       - name: Auto Comment on Issues Assigned
         uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesAssigned: |
             Hello @{{ author }}, thank you for raising an issue. 🙌 I have assigned the issue to you. You can now start working on it. If you encounter any problems, please feel free to connect with us. 👍
+            Don't forget to give a ⭐️ & Happy coding!. 😊
 
       
