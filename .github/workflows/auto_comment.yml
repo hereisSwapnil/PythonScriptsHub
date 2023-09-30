@@ -30,6 +30,15 @@ jobs:
 
             Don't forget to give a ⭐️ & Happy coding!. 😊
 
+      - name: Auto Comment on Issues Opened
+        if: ${{ steps.check_author.outputs.Author == 'Swapnil-Singh-99' && github.actor == github.event.issue.user.login }}
+        uses: wow-actions/auto-comment@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          issuesOpened: |
+            👋 Feel free to leave a comment below if you'd like to work on this issue or create new issue if you have an idea. We welcome your contributions! 😊
+            Don't forget to give a ⭐️ & Happy coding!. 😊
+
       - name: Auto Comment on Issues Closed
         uses: wow-actions/auto-comment@v1
         with:
