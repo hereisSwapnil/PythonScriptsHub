@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check for issue assignees
+        id: check-assignees
         uses: actions/github-script@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -27,13 +28,22 @@ jobs:
             const issueNumber = context.payload.issue.number;
             if (issueNumber) {
               const commenter = context.payload.comment.user.login;
-              const config = {
+              const { data: issueData } = await github.issues.get({
                 owner: 'Swapnil-Singh-99',
                 repo: 'PythonScriptsHub',
-                issue_number: issueNumber,
-                assignees: [commenter]
-              };
-              return github.issues.addAssignees(config);
-            } else {
-              return true;
+                issue_number: issueNumber
+              });
+              
+              const assignees = issueData.assignees.map(assignee => assignee.login);
+              
+              if (!assignees.includes(commenter)) {
+                const config = {
+                  owner: 'Swapnil-Singh-99',
+                  repo: 'PythonScriptsHub',
+                  issue_number: issueNumber,
+                  assignees: [commenter]
+                };
+                return github.issues.addAssignees(config);
+              }
             }
+            return true;
