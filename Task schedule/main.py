@@ -1,16 +1,14 @@
-
 import tkinter as tk
 from tkinter import messagebox, ttk
 from tkcalendar import DateEntry
+import sqlite3
 from datetime import datetime
-
 
 class Task:
     def __init__(self, name, priority, due_date):
         self.name = name
         self.priority = priority
         self.due_date = due_date
-
 
 class TaskManagerApp:
     def __init__(self, root):
@@ -24,6 +22,23 @@ class TaskManagerApp:
         self.due_date_var = tk.StringVar()
 
         self.create_widgets()
+
+        # Create a database connection and a cursor
+        self.conn = sqlite3.connect("tasks.db")
+        self.cursor = self.conn.cursor()
+
+        # Create the tasks table if it doesn't exist
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS tasks (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT,
+                priority TEXT,
+                due_date DATE
+            )
+        ''')
+
+        # Retrieve tasks from the database
+        self.retrieve_tasks_from_db()
 
     def create_widgets(self):
         # Task Name Label and Entry
@@ -39,8 +54,10 @@ class TaskManagerApp:
 
         # Due Date Label and Calendar
         tk.Label(self.root, text="Due Date:").grid(row=2, column=0, sticky="w")
-        due_date_entry = DateEntry(self.root, textvariable=self.due_date_var, date_pattern="yyyy-mm-dd")
-        due_date_entry.grid(row=2, column=1, padx=10, pady=5)
+        
+        # Initialize the calendar widget and store it as an instance variable
+        self.due_date_calendar = DateEntry(self.root, textvariable=self.due_date_var, date_pattern="yyyy-mm-dd")
+        self.due_date_calendar.grid(row=2, column=1, padx=10, pady=5)
 
         # Add Task Button
         add_task_button = tk.Button(self.root, text="Add Task", command=self.add_task)
@@ -75,6 +92,16 @@ class TaskManagerApp:
             self.task_name_var.set("")
             self.priority_var.set("")
             self.due_date_var.set("")
+
+            # Insert the task into the database
+            self.cursor.execute("INSERT INTO tasks (name, priority, due_date) VALUES (?, ?, ?)",
+                                (task.name, task.priority, task.due_date))
+            self.conn.commit()
+            
+            # Reinitialize the calendar widget to fix the display issue
+            self.due_date_calendar.destroy()
+            self.due_date_calendar = DateEntry(self.root, textvariable=self.due_date_var, date_pattern="yyyy-mm-dd")
+            self.due_date_calendar.grid(row=2, column=1, padx=10, pady=5)
         else:
             messagebox.showerror("Error", "Please fill in all fields.")
 
@@ -86,6 +113,10 @@ class TaskManagerApp:
                 if task.name == task_name:
                     self.tasks.remove(task)
                     self.task_list_treeview.delete(selected_item)
+
+                    # Delete the task from the database
+                    self.cursor.execute("DELETE FROM tasks WHERE name=?", (task.name,))
+                    self.conn.commit()
                     break
 
     def clear_task(self):
@@ -93,6 +124,14 @@ class TaskManagerApp:
         self.priority_var.set("")
         self.due_date_var.set("")
 
+    def retrieve_tasks_from_db(self):
+        self.cursor.execute("SELECT name, priority, due_date FROM tasks")
+        rows = self.cursor.fetchall()
+        for row in rows:
+            name, priority, due_date = row
+            task = Task(name, priority, due_date)
+            self.tasks.append(task)
+            self.task_list_treeview.insert("", tk.END, text=task.name, values=(task.priority, task.due_date))
 
 if __name__ == "__main__":
     root = tk.Tk()
