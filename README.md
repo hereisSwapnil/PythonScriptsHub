@@ -54,9 +54,15 @@ Feel free to reach out if you have any questions or need assistance.
 
 ## Our Valuable Contributors
 
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Swapnil-Singh-99/PythonScriptsHub" alt="Contributors"/>
+<table>
+	<tr>
+		<td>
+			<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Swapnil-Singh-99/PythonScriptsHub" />
 </a>
+		</td>
+	</tr>
+</table>
 
 <br> <br>
  
