@@ -9,3 +9,6 @@
 |5.|Website Blocker|A program to block websites on your laptop/computer for a time interval|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/Website_Blocker)|[Swapnil-Singh-99](https://github.com/Swapnil-Singh-99)| 
 |6.|Clock GUI|A simple digital clock Gui using Tkinter|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/Clock%20GUI)|[Abhinavcode13](https://github.com/Abhinavcode13)| 
 |7.|Task Schedule(ToDo)|A Task Schedule GUI|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/Task%20schedule)|[Transyltooniaa](https://github.com/Transyltooniaa)| 
+|8.|Temperature Converter GUI|A tkinter interface to convert temperature from *C to F or vice-versa|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/Temperature%20Converter)|[aryanas159](https://github.com/aryanas159)| 
+|9.|Hangman Game|Terminal Hangman Game|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/hangman)|[Transyltooniaa](https://github.com/Transyltooniaa)| 
+|10.|Reverse a number|A python script to print the reverse of a number|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/reverse-number-script)|[Parvezkhan0](https://github.com/Parvezkhan0)| 
