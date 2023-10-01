@@ -12,3 +12,4 @@
 |8.|Temperature Converter GUI|A tkinter interface to convert temperature from *C to F or vice-versa|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/Temperature%20Converter)|[aryanas159](https://github.com/aryanas159)| 
 |9.|Hangman Game|Terminal Hangman Game|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/hangman)|[Transyltooniaa](https://github.com/Transyltooniaa)| 
 |10.|Reverse a number|A python script to print the reverse of a number|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/reverse-number-script)|[Parvezkhan0](https://github.com/Parvezkhan0)| 
+|11.|Calculator|A calculator GUI|[Link](https://github.com/Swapnil-Singh-99/PythonScriptsHub/tree/main/Calculator)|[Abhipsa05](https://github.com/Abhipsa05)
