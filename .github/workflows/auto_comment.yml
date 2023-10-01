@@ -34,7 +34,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesClosed: |
-            👋 @{{ author }} This issue is closed.
+            👋 @{{ assignee }} This issue is closed.
             Don't forget to give a ⭐️ & Happy coding!. 😊
 
       - name: Auto Comment on Pull Request Merged
