@@ -10,12 +10,13 @@ def validate_email(email):
     else:
         return False
 
-# Example usage
-email1 = "user@example.com"
-email2 = "invalid-email@.com"
-email3 = "another_user@subdomain.example.co.uk"
+# Infinite loop to validate emails based on user input
+while True:
+    user_input = input("Enter an email address (or type 'q' to quit): ")
 
-# Validate the emails
-print(f"Is {email1} a valid email address? {validate_email(email1)}")
-print(f"Is {email2} a valid email address? {validate_email(email2)}")
-print(f"Is {email3} a valid email address? {validate_email(email3)}")
+    if user_input.lower() == 'q':
+        break
+
+    is_valid = validate_email(user_input)
+    print(f"Is {user_input} a valid email address? {is_valid}")
+
