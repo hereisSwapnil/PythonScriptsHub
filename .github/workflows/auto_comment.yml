@@ -23,12 +23,19 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesOpened: |
-            👋 @{{ author }}
+                {{#if eq github.repository.owner.login author}}
+                  👋 @{{ author }}
 
-            Thank you for raising this issue! We'll look into it ASAP.
+                  Thank you for raising this issue! We'll look into it ASAP.
 
-            Don't forget to give a ⭐️ & Happy coding!. 😊
+                  Don't forget to give a ⭐️ & Happy coding!. 😊
+                {{else}}
+                  👋 @{{ author }}
 
+                  Thank you for raising this issue! We'll look into it ASAP.
+
+                  As a contributor, we appreciate your help in improving this project! 😊
+                {{/if}}
       - name: Auto Comment on Issues Closed
         uses: wow-actions/auto-comment@v1
         with:
