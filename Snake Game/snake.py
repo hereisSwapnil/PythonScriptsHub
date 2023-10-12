@@ -91,47 +91,46 @@ while True:
                 snake_direction = (1, 0)
             if event.key == pygame.K_r and game_over:
                 reset_game()
-            if event.key == pygame.K_SPACE and game_over:
-                reset_game()
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+            reset_game()
 
     if game_over:
         game_over_screen()
         wait_for_space()
 
+    # Move the Snake
+    new_head = (snake[0][0] + snake_direction[0], snake[0][1] + snake_direction[1])
+
+    # Check for collisions
+    if new_head == food:
+        snake_growth = True
+        food = (random.randint(0, GRID_WIDTH - 1), random.randint(0, GRID_HEIGHT - 1))
+        score += 1
+    elif new_head in snake or new_head[0] < 0 or new_head[0] >= GRID_WIDTH or new_head[1] < 0 or new_head[1] >= GRID_HEIGHT:
+        game_over = True
+
+    snake.insert(0, new_head)
+    
+    if not snake_growth:
+        snake.pop()
     else:
-        # Move the Snake
-        new_head = (snake[0][0] + snake_direction[0], snake[0][1] + snake_direction[1])
+        snake_growth = False
 
-        # Check for collisions
-        if new_head == food:
-            snake_growth = True
-            food = (random.randint(0, GRID_WIDTH - 1), random.randint(0, GRID_HEIGHT - 1))
-            score += 1
-        elif new_head in snake or new_head[0] < 0 or new_head[0] >= GRID_WIDTH or new_head[1] < 0 or new_head[1] >= GRID_HEIGHT:
-            game_over = True
+    # Clear the screen
+    screen.fill(WHITE)
 
-        snake.insert(0, new_head)
-        
-        if not snake_growth:
-            snake.pop()
-        else:
-            snake_growth = False
+    # Draw Snake
+    for segment in snake:
+        pygame.draw.rect(screen, GREEN, (segment[0] * GRID_SIZE, segment[1] * GRID_SIZE, GRID_SIZE, GRID_SIZE))
 
-        # Clear the screen
-        screen.fill(WHITE)
+    # Draw Food
+    pygame.draw.rect(screen, RED, (food[0] * GRID_SIZE, food[1] * GRID_SIZE, GRID_SIZE, GRID_SIZE))
 
-        # Draw Snake
-        for segment in snake:
-            pygame.draw.rect(screen, GREEN, (segment[0] * GRID_SIZE, segment[1] * GRID_SIZE, GRID_SIZE, GRID_SIZE))
+    # Show the score
+    show_score()
 
-        # Draw Food
-        pygame.draw.rect(screen, RED, (food[0] * GRID_SIZE, food[1] * GRID_SIZE, GRID_SIZE, GRID_SIZE))
+    # Update the display
+    pygame.display.update()
 
-        # Show the score
-        show_score()
-
-        # Update the display
-        pygame.display.update()
-
-        # Control the speed of the game
-        pygame.time.Clock().tick(SNAKE_SPEED)
+    # Control the speed of the game
+    pygame.time.Clock().tick(SNAKE_SPEED)
