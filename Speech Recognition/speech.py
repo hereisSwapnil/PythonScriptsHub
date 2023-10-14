@@ -16,7 +16,6 @@ def takeCommand():
     try:
         with sr.Microphone() as source:
             print('Listening...')
-            speak('Listening...')
             voice = rec.listen(source, phrase_time_limit=2)
             command = rec.recognize_google(voice)
             command = command.lower()
@@ -25,6 +24,7 @@ def takeCommand():
         pass
 
 def main():
+    speak('Listening...')
     while True:
         command = takeCommand()
         if command is not None:
