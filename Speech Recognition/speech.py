@@ -29,6 +29,7 @@ def main():
         command = takeCommand()
         if command is not None:
             speak('You might have said ' + command)
+            print('You might have said ' + command)
         else:
             speak('Please say something.')
 
