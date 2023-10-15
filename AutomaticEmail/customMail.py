@@ -14,21 +14,26 @@ msg['To'] = receiver_email
 msg['Subject'] = subject
 msg.attach(MIMEText(message, 'plain'))
 
-s = smtplib.SMTP('smtp.gmail.com', 587)
+try: 
+    s = smtplib.SMTP('smtp.gmail.com', 587)
 
-# start TLS for security
-s.starttls()
- 
-# Authentication
-s.login(sender_email, password)
- 
-# message to be sent
-text = msg.as_string()
+    # start TLS for security
+    s.starttls()
+    
+    # Authentication
+    s.login(sender_email, password)
+    
+    # message to be sent
+    text = msg.as_string()
 
-# sending the mail
-s.sendmail(sender_email, receiver_email, text)
- 
-# terminating the session
-s.quit()
+    # sending the mail
+    s.sendmail(sender_email, receiver_email, text)
+    
+    # terminating the session
+    s.quit()
 
-print("email sent successfully")
+    print("email sent successfully")
+
+except Exception as e:
+
+    print("An error occurred: ", str(e))
