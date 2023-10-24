@@ -1,0 +1,25 @@
+name: Dependency Security
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install safety
+        run: pip install safety
+
+      - name: Check for security vulnerabilities
+        run: safety check --full-report
