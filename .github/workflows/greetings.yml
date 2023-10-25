@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "Hello @${{ github.actor }}! \nCongratulations on opening your first issue in the PythonScriptsHub repository! 🎉 Your contribution is valuable to us! 😊 \n\nPlease make sure to follow our [Contributing Guidelines. 💪🏻](https://github.com/Swapnil-Singh-99/PythonScriptsHub/blob/main/CONTRIBUTING.md) \n\nOur review team will carefully assess the issue and reach out to you soon! \n We appreciate your patience! "
+        pr-message: "Thank you, @${{ github.actor }}, on submitting your very first pull request to the PythonScriptsHub repository! 🥳\n\n The maintainers will review this Pull Request and provide feedback as soon as possible! \nWe appreciate your patience and contribution, Keep up the great work! 😀"
