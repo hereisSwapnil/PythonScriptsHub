@@ -1,0 +1,38 @@
+name: Auto Assign
+
+on:
+  issues:
+    types:
+      - opened
+  issue_comment:
+    types:
+      - created
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  auto-assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Issue Event
+        run: "Event: ${{ github.event_name }}"
+
+      - name: Check Issue Comment and Assign
+        if: |
+          (github.event_name == 'issue_comment' && (
+            startsWith(github.event.comment.body, '/assign') || 
+            startsWith(github.event.comment.body, '/unassign') || 
+            contains(github.event.comment.body, 'assign to me') || 
+            contains(github.event.comment.body, 'please assign me this')  || 
+            contains(github.event.comment.body, 'assign this to me')  || 
+            contains(github.event.comment.body, 'assign this issue to me')  || 
+            contains(github.event.comment.body, 'I can try fixing this')  || 
+            contains(github.event.comment.body, 'i am interested in doing this')  || 
+            contains(github.event.comment.body, 'I am interested in contributing'))) || 
+          github.event_name == 'schedule' || 
+          github.event_name == 'workflow_dispatch'
+        run: |
+          gh issue assign ${{ github.event.issue.number }} --assignee ${{ github.event.issue.user.login }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
