@@ -1,76 +1,179 @@
-
 <div align="center">
- 
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/issues" target="_blank" title="PythonScriptsHub">![PythonScriptsHub](https://socialify.git.ci/Swapnil-Singh-99/PythonScriptsHub/image?description=1&descriptionEditable=Diverse%20collection%20of%20Python%20Scripts&font=Jost&name=1&owner=1&pattern=Plus&theme=Auto)</a>
+  <img src="images/logo/inventree.png" alt="InvenTree logo" width="200" height="auto" />
+  <h1>InvenTree</h1>
+  <p>Open Source Inventory Management System </p>
 
-<br>
- 
-![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) &nbsp; ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg) &nbsp;
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub"><img src="https://sloc.xyz/github/Swapnil-Singh-99/PythonScriptsHub" alt="LOC"/></a> &nbsp;
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/stargazers"><img src="https://img.shields.io/github/stars/Swapnil-Singh-99/PythonScriptsHub" alt="Stars Badge"/></a> &nbsp;<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/network/members"><img src="https://img.shields.io/github/forks/Swapnil-Singh-99/PythonScriptsHub" alt="Forks Badge"/></a> &nbsp;
-![GitHub contributors](https://img.shields.io/github/contributors/Swapnil-Singh-99/PythonScriptsHub?color=blue) &nbsp;
-![GitHub last commit](https://img.shields.io/github/last-commit/Swapnil-Singh-99/PythonScriptsHub?color=red&style=plastic) &nbsp;
-![Repo. Size](https://img.shields.io/github/repo-size/Swapnil-Singh-99/PythonScriptsHub?color=white) &nbsp;  
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?v=103"></a>&nbsp;
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/issues"><img src="https://img.shields.io/github/issues/Swapnil-Singh-99/PythonScriptsHub?color=0059b3"></a>&nbsp;
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/Swapnil-Singh-99/PythonScriptsHub?color=yellow"></a>&nbsp;
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/pulls"><img src="https://img.shields.io/github/issues-pr/Swapnil-Singh-99/PythonScriptsHub?color=brightgreen"></a>&nbsp;
-<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed-raw/Swapnil-Singh-99/PythonScriptsHub?color=0059b3"></a> &nbsp;
+<!-- Badges -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/inventree/inventree)
+![CI](https://github.com/inventree/inventree/actions/workflows/qc_checks.yaml/badge.svg)
+[![Documentation Status](https://readthedocs.org/projects/inventree/badge/?version=latest)](https://inventree.readthedocs.io/en/latest/?badge=latest)
+![Docker Build](https://github.com/inventree/inventree/actions/workflows/docker.yaml/badge.svg)
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/7179/badge)](https://bestpractices.coreinfrastructure.org/projects/7179)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9bbb2101-0a4d-41e7-ad56-b63fb6053094/deploy-status)](https://app.netlify.com/sites/inventree/deploys)
+[![DeepSource](https://app.deepsource.com/gh/inventree/InvenTree.svg/?label=active+issues&show_trend=false&token=trZWqixKLk2t-RXtpSIAslVJ)](https://app.deepsource.com/gh/inventree/InvenTree/)
 
-</br>
+[![Coveralls](https://img.shields.io/coveralls/github/inventree/InvenTree)](https://coveralls.io/github/inventree/InvenTree)
+[![Crowdin](https://badges.crowdin.net/inventree/localized.svg)](https://crowdin.com/project/inventree)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/inventree/inventree)
+[![Docker Pulls](https://img.shields.io/docker/pulls/inventree/inventree)](https://hub.docker.com/r/inventree/inventree)
+
+![GitHub Org's stars](https://img.shields.io/github/stars/inventree?style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/inventreedb?style=social)](https://twitter.com/inventreedb)
+[![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/inventree?style=social)](https://www.reddit.com/r/InvenTree/)
+
+
+<h4>
+    <a href="https://demo.inventree.org/">View Demo</a>
+  <span> · </span>
+    <a href="https://docs.inventree.org/en/latest/">Documentation</a>
+  <span> · </span>
+    <a href="https://github.com/inventree/InvenTree/issues/new?template=bug_report.md&title=[BUG]">Report Bug</a>
+  <span> · </span>
+    <a href="https://github.com/inventree/InvenTree/issues/new?template=feature_request.md&title=[FR]">Request Feature</a>
+  </h4>
 </div>
 
-## 📌 Opensource Programs
+<!-- About the Project -->
+## :star2: About the Project
 
-### This project is a part of following Open Source Programs
+InvenTree is an open-source Inventory Management System which provides powerful low-level stock control and part tracking. The core of the InvenTree system is a Python/Django database backend which provides an admin interface (web-based) and a REST API for interaction with external interfaces and applications. A powerful plugin system provides support for custom applications and extensions.
 
-<p align="center"><img alt="Logo"  src="https://i.postimg.cc/8cYBbyYp/hf10-banner-1032x600.png"></p>
+Check out [our website](https://inventree.org) for more details.
 
-## 💻Table of Contents
-  - **[How to Contribute?](#how-to-contribute)**
-  - **[Project Admin](#project-admin)**
-  - **[Our Valuable Contributors](#our-valuable-contributors)**
-  
-## How to Contribute?
+<!-- Roadmap -->
+### :compass: Roadmap
 
-- Check it out [here](https://github.com/Swapnil-Singh-99/PythonScriptsHub/blob/main/CONTRIBUTING.md).
-- Enhance the clarity of your Pull Request by including relevant screenshots or screen captures. This helps everyone understand the visual impact of your proposed changes.
+Want to see what we are working on? Check out the [roadmap tag](https://github.com/inventree/InvenTree/issues?q=is%3Aopen+is%3Aissue+label%3Aroadmap) and [horizon milestone](https://github.com/inventree/InvenTree/milestone/42).
 
-Your contributions are highly appreciated! Let's collaborate to make PythonScriptsHub even better.
+<!-- Integration -->
+### :hammer_and_wrench: Integration
 
-Feel free to reach out if you have any questions or need assistance.
-  
-## Project Maintainers
+InvenTree is designed to be **extensible**, and provides multiple options for **integration** with external applications or addition of custom plugins:
 
-<table align="center">
-<tr>
-<td align="center"><a href="https://github.com/Swapnil-Singh-99"><img src="https://avatars.githubusercontent.com/u/85278243?v=4" width=150px height=150px style="border-radius:50%"/></a></br> <h4 style="color:red;">Swapnil Singh</h4>
-<a href="https://www.linkedin.com/in/swapnilsingh99/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
-<td align="center"><a href="https://github.com/Yashshukla11"><img src="https://avatars.githubusercontent.com/u/112846526?v=4" width=150px height=150px style="border-radius:50%" /></a></br> <h4 style="color:red;">Yash Shukla</h4>
-<a href="https://www.linkedin.com/in/yash-shukla-a43838266/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
-</tr>
-</table>
-<br>
+* [InvenTree API](https://docs.inventree.org/en/latest/api/api/)
+* [Python module](https://docs.inventree.org/en/latest/api/python/python/)
+* [Plugin interface](https://docs.inventree.org/en/latest/extend/plugins)
+* [Third party tools](https://docs.inventree.org/en/latest/extend/integrate)
 
-## Our Valuable Contributors
+<!-- TechStack -->
+### :space_invader: Tech Stack
 
-<table>
-	<tr>
-		<td>
-			<a href="https://github.com/Swapnil-Singh-99/PythonScriptsHub/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Swapnil-Singh-99/PythonScriptsHub" />
-</a>
-		</td>
-	</tr>
-</table>
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.python.org/">Python</a></li>
+    <li><a href="https://www.djangoproject.com/">Django</a></li>
+    <li><a href="https://www.django-rest-framework.org/">DRF</a></li>
+    <li><a href="https://django-q.readthedocs.io/">Django Q</a></li>
+    <li><a href="https://django-allauth.readthedocs.io/">Django-Allauth</a></li>
+  </ul>
+</details>
 
-<br> <br>
- 
----
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://www.mysql.com/">MySQL</a></li>
+    <li><a href="https://www.sqlite.org/">SQLite</a></li>
+    <li><a href="https://redis.io/">Redis</a></li>
+  </ul>
+</details>
 
-<div align="center">
-  <b>If you find this project valuable or if you've learned something from it, give it a ⭐!</b>
-  <br> <br>
- 
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+    <li><a href="https://jquery.com/">jQuery</a></li>
+    <li><a href="https://bootstrap-table.com/">Bootstrap-Table</a></li>
+  </ul>
+</details>
 
-</div>
+<details>
+<summary>DevOps</summary>
+  <ul>
+    <li><a href="https://hub.docker.com/r/inventree/inventree">Docker</a></li>
+    <li><a href="https://crowdin.com/project/inventree">Crowdin</a></li>
+    <li><a href="https://coveralls.io/github/inventree/InvenTree">Coveralls</a></li>
+    <li><a href="https://app.deepsource.com/gh/inventree/InvenTree">DeepSource</a></li>
+    <li><a href="https://packager.io/gh/inventree/InvenTree">Packager.io</a></li>
+  </ul>
+</details>
+
+<!-- Getting Started -->
+## 	:toolbox: Deployment / Getting Started
+
+There are several options to deploy InvenTree.
+
+<div align="center"><h4>
+    <a href="https://docs.inventree.org/en/latest/start/docker/">Docker</a>
+    <span> · </span>
+    <a href="https://inventree.org/digitalocean"><img src="https://www.deploytodo.com/do-btn-blue-ghost.svg" alt="Deploy to DO" width="auto" height="40" /></a>
+    <span> · </span>
+    <a href="https://docs.inventree.org/en/latest/start/install/">Bare Metal</a>
+</h4></div>
+
+Single line install - read [the docs](https://docs.inventree.org/en/latest/start/installer/) for supported distros and details about the function:
+```bash
+wget -qO install.sh https://get.inventree.org && bash install.sh
+```
+
+Refer to the [getting started guide](https://docs.inventree.org/en/latest/start/install/) for a full set of installation and setup instructions.
+
+<!-- Mobile App -->
+## 	:iphone: Mobile App
+
+InvenTree is supported by a [companion mobile app](https://docs.inventree.org/en/latest/app/app/) which allows users access to stock control information and functionality.
+
+<div align="center"><h4>
+    <a href="https://play.google.com/store/apps/details?id=inventree.inventree_app">Android Play Store</a>
+     <span> · </span>
+    <a href="https://apps.apple.com/au/app/inventree/id1581731101#?platform=iphone">Apple App Store</a>
+</h4></div>
+
+<!-- Contributing -->
+## :wave: Contributing
+
+Contributions are welcomed and encouraged. Please help to make this project even better! Refer to the [contribution page](CONTRIBUTING.md).
+
+<!-- Translation -->
+## :scroll: Translation
+
+Native language translation of the InvenTree web application is [community contributed via crowdin](https://crowdin.com/project/inventree). **Contributions are welcomed and encouraged**.
+
+<!-- Sponsor -->
+## :money_with_wings: Sponsor
+
+If you use InvenTree and find it to be useful, please consider [sponsoring the project](https://github.com/sponsors/inventree).
+
+<!-- Acknowledgments -->
+## :gem: Acknowledgements
+
+We would like to acknowledge a few special projects:
+ - [PartKeepr](https://github.com/partkeepr/PartKeepr) as a valuable predecessor and inspiration
+ - [Readme Template](https://github.com/Louis3797/awesome-readme-template) for the template of this page
+
+Find a full list of used third-party libraries in [our documentation](https://docs.inventree.org/en/latest/credits/).
+
+## :heart: Support
+
+<p>This project is supported by the following sponsors:</p>
+
+<p align="center">
+<!-- sponsors --><!-- sponsors -->
+</p>
+
+<p>With ongoing resources provided by:</p>
+
+<p align="center">
+  <a href="https://inventree.org/digitalocean">
+    <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_blue.svg" width="201px">
+  </a>
+  <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify" /> </a>
+  <a href="https://crowdin.com"> <img src="https://crowdin.com/images/crowdin-logo.svg" alt="Crowdin" /> </a>
+</p>
+
+
+<!-- License -->
+## :warning: License
+
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. See [LICENSE.txt](https://github.com/inventree/InvenTree/blob/master/LICENSE) for more information.
