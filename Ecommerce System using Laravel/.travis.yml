@@ -1,0 +1,21 @@
+language: php
+
+jsdecena:
+  - php72-composer:latest
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_script:
+  - cd project
+  - cp .env.testing .env
+  - composer install --no-interaction
+  - composer dump-autoload
+
+script:
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
