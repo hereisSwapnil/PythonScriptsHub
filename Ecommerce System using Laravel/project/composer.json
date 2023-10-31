@@ -1,0 +1,87 @@
+{
+    "name": "jsdecena/laracom",
+    "description": "Laravel powered e-commerce",
+    "keywords": ["e-commerce", "ecommerce", "shopping-cart", "laravel", "laracom", "laravel-ecommerce", "shop", "laravel5", "framework", "package"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "^7.2|^8.0",
+        "ext-json": "*",
+        "barryvdh/laravel-dompdf": "^1.0",
+        "binarytorch/larecipe": "^2.4",
+        "doctrine/dbal": "^3.1",
+        "fideloper/proxy": "^4.4",
+        "fruitcake/laravel-cors": "^2.0",
+        "gloudemans/shoppingcart": "dev-laravel-8",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "jsdecena/baserepo": "^1.0",
+        "jsdecena/mcpro": "1.1.*",
+        "kalnoy/nestedset": "^6.0",
+        "laravel/framework": "8.75.0",
+        "laravel/legacy-factories": "^1.1",
+        "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.3",
+        "nicolaslopezj/searchable": "^1.10",
+        "paypal/rest-api-sdk-php": "*",
+        "santigarcor/laratrust": "^6.3",
+        "shippo/shippo-php": "^1.4"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jsdecena/LaravelShoppingcart"
+        }
+    ],
+    "require-dev": {
+        "fakerphp/faker": "^1.21",
+        "filp/whoops": "~2.0",
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~7.0|~8.0"
+    },
+    "autoload": {
+        "files": [
+            "app/Helpers/helper.php"
+        ],
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform-check": false
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
