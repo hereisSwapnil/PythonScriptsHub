@@ -1,0 +1,11 @@
+* text=auto
+
+*.py text
+*.md text
+*.html text
+*.txt text
+*.yml text
+*.yaml text
+*.conf text
+*.sh text eol=lf
+*.js text
